@@ -3,23 +3,23 @@
 Answers to questions
 [here](https://www.w3.org/TR/security-privacy-questionnaire/).
 
-3.1. Does this specification deal with personally-identifiable information?
-No personally-identifiable information is handled by this API.
+* 3.1 - Does this specification deal with personally-identifiable information?
+** No personally-identifiable information is handled by this API.
 
-3.2. Does this specification deal with high-value data?
-No high-value data is handled by this API.
+* 3.2 - Does this specification deal with high-value data?
+** No high-value data is handled by this API.
 
-3.3. Does this specification introduce new state for an origin that persists
+* 3.3 - Does this specification introduce new state for an origin that persists
 across browsing sessions?
-Sort of. Explicit compilation provides a strong code caching hint.
+** Sort of. Explicit compilation provides a strong code caching hint.
 If honored strongly, this hint increases the likelihood that large amounts
 of code from an insecure origin (and thus a possibly compromised source),
 might persist.
 
-Browsers can mitigate this by tending not to persist with unfamiliar
+** Browsers can mitigate this by tending not to persist with unfamiliar
 network interfaces.
 
-Even better, as we have done in Chrome, this API can be limited to secure
+** Even better, as we have done in Chrome, this API can be limited to secure
 origins only.
 
 
