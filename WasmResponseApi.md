@@ -4,40 +4,40 @@ Answers to questions
 [here](https://www.w3.org/TR/security-privacy-questionnaire/).
 
 * 3.1 - Does this specification deal with personally-identifiable information?
-** No personally-identifiable information is handled by this API.
+  * No personally-identifiable information is handled by this API.
 
 * 3.2 - Does this specification deal with high-value data?
-** No high-value data is handled by this API.
+  * No high-value data is handled by this API.
 
 * 3.3 - Does this specification introduce new state for an origin that persists
 across browsing sessions?
-** Sort of. Explicit compilation provides a strong code caching hint.
-If honored strongly, this hint increases the likelihood that large amounts
-of code from an insecure origin (and thus a possibly compromised source),
-might persist.
+  * Sort of. Explicit compilation provides a strong code caching hint.
+    If honored strongly, this hint increases the likelihood that large amounts
+    of code from an insecure origin (and thus a possibly compromised source),
+    might persist.
 
-** Browsers can mitigate this by tending not to persist with unfamiliar
-network interfaces.
+    Browsers can mitigate this by tending not to persist with unfamiliar
+    network interfaces.
 
-** Even better, as we have done in Chrome, this API can be limited to secure
-origins only.
+    Even better, as we have done in Chrome, this API can be limited to secure
+    origins only.
 
 
-3.4. Does this specification expose persistent, cross-origin state to the web?
-No, although foreign fetch would cause 3.3 to affect cross-origin requests too.
+* 3.4 - Does this specification expose persistent, cross-origin state to the web?
+  * No, although foreign fetch would cause 3.3 to affect cross-origin requests too.
 
-3.5. Does this specification expose any other data to an origin that it
+* 3.5 - Does this specification expose any other data to an origin that it
 doesn’t currently have access to?
-By origin binding compilation, this API allows wasm modules accessed via a
-Content Security Policy that disallows unsafe-eval (which currently includes
-Wasm) to run.
+  * By origin binding compilation, this API allows wasm modules accessed via a
+    Content Security Policy that disallows unsafe-eval (which currently includes
+    Wasm) to run.
 
-3.6. Does this specification enable new script execution/loading mechanisms?
-Yes, this API allows origin bound compilation of WebAssembly could from
-Response objects or Promises of Response objects.
+* 3.6 - Does this specification enable new script execution/loading mechanisms?
+  * Yes, this API allows origin bound compilation of WebAssembly could from
+    Response objects or Promises of Response objects.
 
-3.7. Does this specification allow an origin access to a user’s location?
-No, this API does not involve location info.
+* 3.7 - Does this specification allow an origin access to a user’s location?
+  * No, this API does not involve location info.
 
 3.8. Does this specification allow an origin access to sensors on a user’s
 device?
