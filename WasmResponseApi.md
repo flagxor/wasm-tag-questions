@@ -39,40 +39,40 @@ doesn’t currently have access to?
 * 3.7 - Does this specification allow an origin access to a user’s location?
   * No, this API does not involve location info.
 
-3.8. Does this specification allow an origin access to sensors on a user’s
-device?
-No, this API does not involve sensor info.
+* 3.8 - Does this specification allow an origin access to sensors on a user’s
+        device?
+  * No, this API does not involve sensor info.
 
-3.9. Does this specification allow an origin access to aspects of a user’s
-local computing environment?
-No, this API does not involve access to the local computing environment.
+* 3.9 - Does this specification allow an origin access to aspects of a user’s
+        local computing environment?
+  * No, this API does not involve access to the local computing environment.
 
-3.10. Does this specification allow an origin access to other devices?
-No, this API does not involve access to other devices.
+* 3.10 - Does this specification allow an origin access to other devices?
+  * No, this API does not involve access to other devices.
 
-3.11. Does this specification allow an origin some measure of control over a
-user agent’s native UI?
-No, this API does not involve access anything UI visible.
+* 3.11 - Does this specification allow an origin some measure of control over a
+         user agent’s native UI?
+  * No, this API does not involve access anything UI visible.
 
-3.12. Does this specification expose temporary identifiers to the web?
-No, this API does not involve expose temporary identifiers.
+* 3.12 - Does this specification expose temporary identifiers to the web?
+   * No, this API does not involve expose temporary identifiers.
 
-3.13. Does this specification distinguish between behavior in first-party and
-third-party contexts?
-This API should behave identically to fetch in terms of first-party /
-third-party contexts.
+* 3.13 - Does this specification distinguish between behavior in first-party and
+         third-party contexts?
+  * This API should behave identically to fetch in terms of first-party /
+    third-party contexts.
 
-3.14. How should this specification work in the context of a user agent’s
-"incognito" mode?
-This API should behave the same in incognito mode.
+* 3.14 - How should this specification work in the context of a user agent’s
+         "incognito" mode?
+  * This API should behave the same in incognito mode.
 
-3.15. Does this specification persist data to a user’s local device?
-Compilation is a strong hint for code caching, but does not mandate it.
+* 3.15 -  Does this specification persist data to a user’s local device?
+  * Compilation is a strong hint for code caching, but does not mandate it.
 
-3.16. Does this specification have a "Security Considerations" and "Privacy
-Considerations" section?
-The final WebAssembly spec will have these.
+* 3.16 - Does this specification have a "Security Considerations" and "Privacy
+         Considerations" section?
+  * The final WebAssembly spec will have these.
 
-3.17. Does this specification allow downgrading default security
-characteristics?
-No it does not.
+* 3.17 - Does this specification allow downgrading default security
+         characteristics?
+  * No it does not.
