@@ -6,8 +6,7 @@ The WebAssembly Core specification defines a virtual machine which can only inte
 … WebAssembly's security and privacy environment is strictly more restrive than that of a worker.
 … All interesting built-in capabilities are exposed by operators for computation and resource allocation, i.e. worst case is DOS by resource exhaustion.
 
-## Answers to questions
-[here](https://www.w3.org/TR/security-privacy-questionnaire/).
+## Answers to [security qustions](https://www.w3.org/TR/security-privacy-questionnaire/).
 
 * 3.1 - Does this specification deal with personally-identifiable information?
   * No personally-identifiable information is handled by this API.
