@@ -2,7 +2,7 @@
 
 ## Overview
 
-The WebAssembly Core specification defines a virtual machine which can only interact with the outside world via *host bindings". The JS API host binding specifies how WebAssembly is used in a browser by passing all data and API calls through Javascript in the host environment. Because of this:
+The WebAssembly Core specification defines a virtual machine which can only interact with the outside world via *host environments". The JS-API host environment specifies how WebAssembly is used in a browser by passing all data and API calls through Javascript in the host environment. Because of this:
 … WebAssembly's security and privacy environment is strictly more restrive than that of a worker.
 … All interesting built-in capabilities are exposed by operators for computation and resource allocation, i.e. worst case is DOS by resource exhaustion.
 
@@ -24,7 +24,7 @@ across browsing sessions?
 * 3.5 - Does this specification expose any other data to an origin that it
 doesn’t currently have access to?
   * On its own, WASM can't be used to  e.g. set up a web server to expose data to which it has access.
-  * Withing the JS-API host binding, it is subject to the same cross-origin restrictions as any other Javascript program.
+  * Withing the JS-API host environment, it is subject to the same cross-origin restrictions as any other Javascript program.
 
 * 3.6 - Does this specification enable new script execution/loading mechanisms?
   * Yes, this API allows origin bound compilation of WebAssembly could from
