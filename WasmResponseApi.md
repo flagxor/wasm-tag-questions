@@ -1,6 +1,12 @@
 # Wasm Response API Tag Questionnaire
 
-Answers to questions
+## Overview
+
+The WebAssembly Core specification defines a virtual machine which can only interact with the outside world via *host bindings". The JS API host binding specifies how WebAssembly is used in a browser by passing all data and API calls through Javascript in the host environment. Because of this:
+… WebAssembly's security and privacy environment is strictly more restrive than that of a worker.
+… All interesting built-in capabilities are exposed by operators for computation and resource allocation, i.e. worst case is DOS by resource exhaustion.
+
+## Answers to questions
 [here](https://www.w3.org/TR/security-privacy-questionnaire/).
 
 * 3.1 - Does this specification deal with personally-identifiable information?
@@ -11,26 +17,15 @@ Answers to questions
 
 * 3.3 - Does this specification introduce new state for an origin that persists
 across browsing sessions?
-  * Sort of. Explicit compilation provides a strong code caching hint.
-    If honored strongly, this hint increases the likelihood that large amounts
-    of code from an insecure origin (and thus a possibly compromised source),
-    might persist.
-
-    Browsers can mitigate this by tending not to persist with unfamiliar
-    network interfaces.
-
-    Even better, as we have done in Chrome, this API can be limited to secure
-    origins only.
-
+  * Only to the extent that WebAssembly code may, like any other web resource, be stored in caches and proxies.
 
 * 3.4 - Does this specification expose persistent, cross-origin state to the web?
-  * No, although foreign fetch would cause 3.3 to affect cross-origin requests too.
+  * In the JS-API, access to WebAssembly resources is via the `fetch()` API. Thus, the only differential access to resources between WebAssembly and conventional Javascript occurs if `fetch("…")` and `<script src="...">` have differnt security policies.
 
 * 3.5 - Does this specification expose any other data to an origin that it
 doesn’t currently have access to?
-  * By origin binding compilation, this API allows wasm modules accessed via a
-    Content Security Policy that disallows unsafe-eval (which currently includes
-    Wasm) to run.
+  * On its own, WASM can't be used to  e.g. set up a web server to expose data to which it has access.
+  * Withing the JS-API host binding, it is subject to the same cross-origin restrictions as any other Javascript program.
 
 * 3.6 - Does this specification enable new script execution/loading mechanisms?
   * Yes, this API allows origin bound compilation of WebAssembly could from
