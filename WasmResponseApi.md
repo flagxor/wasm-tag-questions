@@ -24,7 +24,7 @@ across browsing sessions?
 * 3.5 - Does this specification expose any other data to an origin that it
 doesn’t currently have access to?
   * On its own, WASM can't be used to  e.g. set up a web server to expose data to which it has access.
-  * Withing the JS-API host environment, it is subject to the same cross-origin restrictions as any other Javascript program.
+  * Within the JS-API host environment, it is subject to the same cross-origin restrictions as any other Javascript program.
 
 * 3.6 - Does this specification enable new script execution/loading mechanisms?
   * Yes, this API allows origin bound compilation of WebAssembly could from
